@@ -1,0 +1,74 @@
+/* css reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button,
+input {
+  outline: 0;
+}
+
+h1 {
+  width: 100%;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.hint {
+  text-align: center;
+  margin-top: 5px;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+  max-width: 280px;
+}
+
+.guess-inp {
+  padding: 0.5rem 10px;
+  border: 2px solid #333;
+  border-radius: 0.3rem;
+  margin-block: 20px 10px;
+}
+
+.check-btn,
+.redo-btn {
+  background: transparent;
+  font-size: 0.9em;
+  border: 2px solid #333;
+  border-radius: 0.3rem;
+  padding: 0.2rem 10px;
+  cursor: pointer;
+}
+
+.msg-container {
+  margin-top: 10px;
+}
+
+/* utility classes */
+.hidden {
+  display: none !important;
+}
+
+/* reseting the default input[type="number"] styles */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+}
