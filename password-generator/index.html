@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator | By Sina Bayandorian</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: url('./bg.webp') no-repeat center/cover;
+        }
+
+        /*
+            background image is a webp image this format provides less quality loss with low volumes,
+            however feel free to download another from the link below in case of support issues
+            pexels - photo by Markus Spiske ==> https://www.pexels.com/photo/close-up-photo-of-matrix-background-1089438/
+        */
+    </style>
+</head>
+
+<body class="flex items-center justify-center min-h-screen w-full">
+    <!--
+        for this project I decided to use tailwind cli instead of tailwind cdn
+        so you need to have node.js installed on your device and have a little
+        bit of npm knowledge - run "npm install" in your cmd or terminal after
+        cloning the project from github in order to have the required packages
+        installed
+
+        --- download and install node.js which installs the npm by itself from their own official website ---
+        node.js official website address ==> https://nodejs.org/en/
+
+        --- tailwind-css installation guide ---
+        https://tailwindcss.com/docs/installation
+    -->
+    <main
+        class="flex flex-col items-center bg-primary w-[350px] rounded-lg overflow-hidden py-3 border-2 border-secondary text-secondary">
+        <header class="mb-2">
+            <h1 class="text-lg">Password Generator</h1>
+        </header>
+        <section class="grid grid-cols-6 items-center w-full px-4 gap-x-2 gap-y-3">
+            <input type="text"
+                class="pass-disp col-span-6 bg-primary-dark text-secondary border-2 border-secondary rounded-md outline-0 pb-[10px] pt-[7px] placeholder-secondary text-center"
+                placeholder="password" readonly>
+            <div class="input-wrap col-span-2 flex items-center gap-x-1">
+                <label for="length-input" class="w-1/5 text-sm">
+                    length
+                </label>
+                <!--
+                    I chose input[type='number'] in order to develop the project as fast as possible,
+                    but there are some downsides to this type of input
+                    1. some input attributes doesn't work on them
+                    2. "e" is also allwed in this type of input event though we only need numbers here
+                    ==> this can be a good challenge for you to use input[type='text'] instead and then use js to allow number-only inputs
+                    ==> hint: use Number() and isNaN() pre-built functions in order to achieve such a result
+                -->
+                <input type="number" id="length-input" value="4"
+                    class="length-input w-3/6 border-2 border-secondary bg-transparent rounded-md pb-[5px] pt-[3.5px] outline-0 px-1 text-center placeholder-secondary ml-5">
+            </div>
+            <button
+                class="copy-btn col-span-2 border-2 border-secondary rounded-md hover:bg-primary-dark pb-[5px] pt-[3.5px]">
+                Copy
+            </button>
+            <button type=" button"
+                class="gen-btn border-2 border-secondary col-span-2 rounded-md hover:bg-primary-dark pb-[5px] pt-[3.5px]">
+                Generate
+            </button>
+        </section>
+        <section class="options-section px-10 mt-5 border-y-2 border-secondary w-full py-6 bg-primary-dark">
+            <div>
+                <input type="checkbox" id="checkbox-1" class="capitals-checkbox accent-secondary" checked>
+                <label for="checkbox-1">include capital letters</label>
+            </div>
+            <div>
+                <input type="checkbox" id="checkbox-2" class="signs-checkbox accent-secondary" checked>
+                <label for="checkbox-2">include signs</label>
+            </div>
+        </section>
+        <footer class="mt-3">
+            <a href="https://github.com/sina-byn" class="text-sm underline">
+                my github - make sure to follow
+            </a>
+        </footer>
+    </main>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
