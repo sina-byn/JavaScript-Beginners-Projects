@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator | By Sina Bayandorian</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="flex items-center justify-center h-screen bg-gradient-to-br from-pink-100 via-cyan-50 to-purple-100">
+    <main class="flex flex-col items-center w-[300px]">
+        <header class="mb-4">
+            <h1 class="text-xl text-zinc-700 font-bold">QR Code Generator</h1>
+            <p class="text-text-center mt-2">click on generate and wait for the download link to appear</p>
+        </header>
+        <section class="qr-code-container w-full">
+            <div class="qr-code mb-8"></div>
+            <input type="text"
+                class="url-input h-10 w-full bg-transparent border-2 border-zinc-600 rounded-md outline-0 py-2 px-3">
+            <div class="flex items-center justify-between gap-x-2 w-full text-sm text-zinc-600 mt-2">
+                <button type="button"
+                    class="paste-btn w-1/2 border-2 border-zinc-600 font-bold rounded-md py-1 transition-transform duration-300 hover:scale-105 active:scale-95">
+                    Paste Link
+                </button>
+                <button type="button"
+                    class="generate-btn w-1/2 border-2 border-zinc-600 font-bold rounded-md py-1 transition-transform duration-300 hover:scale-105 active:scale-95">
+                    Generate
+                </button>
+            </div>
+            <a href="javascript:void(0)"
+                class="download-link hidden block text-center text-sm text-zinc-600 font-bold border-2 border-zinc-600 rounded-md mt-2 text-sm py-1 transition-transform duration-300 hover:scale-105 active:scale-95">Download</a>
+        </section>
+    </main>
+    <script src="./qrcode.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
