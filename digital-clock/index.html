@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock | By Sina Bayandorian</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: inherit;
+        }
+
+        body {
+            row-gap: 10px;
+            height: 100vh;
+            overflow: hidden;
+            font-family: 'Orbitron', sans-serif;
+            background: #111111;
+            color: #ff7300;
+        }
+
+        main {
+            width: 300px;
+            font-size: 40px;
+            column-gap: 5px;
+        }
+
+        section {
+            column-gap: 5px;
+            width: 300px;
+        }
+
+        button {
+            width: 50%;
+            outline: 0;
+            border: 1px solid #ff7300;
+            background: transparent;
+            color: #ff7300;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: transform 0.3s linear;
+        }
+
+        button:active {
+            transform: scale(0.9);
+        }
+
+        .am-pm-disp {
+            font-size: 30px;
+        }
+
+        /* utility classes */
+        .flex {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .flex-col {
+            flex-direction: column;
+        }
+
+        .justify-between {
+            justify-content: space-between;
+        }
+    </style>
+</head>
+
+<body class="flex flex-col">
+    <section class="flex">
+        <button type="button" class="format-24h-btn">24h</button>
+        <button type="button" class="format-am-pm-btn">AM/PM</button>
+    </section>
+    <main class="flex justify-between">
+        <p class="hours-disp">00</p>
+        <span>:</span>
+        <p class="minutes-disp">00</p>
+        <span>:</span>
+        <p class="seconds-disp">00</p>
+        <span class="am-pm-disp"></span>
+    </main>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
