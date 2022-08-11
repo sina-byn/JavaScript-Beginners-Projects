@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .btn {
+        @apply w-1/2 text-gray-200 bg-zinc-800 border-2 border-gray-200/75 px-6 pb-2 pt-1.5 text-sm mt-5 rounded-lg transition-all duration-300 active:scale-90;
+    }
+}

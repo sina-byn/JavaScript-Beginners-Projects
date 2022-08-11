@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote Generator | By Sina Bayandorian</title>
+    <link rel="stylesheet" href="./styles.css">
+    <style>
+        body {
+            background: url('./World\ Map.svg') no-repeat center/cover;
+        }
+    </style>
+</head>
+
+<body class="flex items-center justify-center h-screen">
+    <main class="flex flex-col items-center">
+        <section
+            class="quote-disp w-[300px] min-h-[300px] bg-zinc-800 border-2 border-gray-200/75 rounded-lg px-6 py-4">
+            <div class="flex flex-wrap items-center justify-between w-full">
+                <h2 class="font-bold text-gray-200/75">A Quote By: </h2>
+                <span class="name-disp text-gray-200/75"></span>
+            </div>
+            <div class="quote-text w-full text-gray-200/75 text-[0.85rem] mt-3">
+
+            </div>
+        </section>
+        <section class="flex items-center w-full gap-x-2">
+            <button type="button"
+                class="btn copy-btn">
+                Copy
+            </button>
+            <button type="button"
+                class="btn gen-btn">
+                Generate
+            </button>
+        </section>
+    </main>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
